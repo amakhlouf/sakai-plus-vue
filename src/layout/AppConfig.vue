@@ -93,6 +93,9 @@ const applyScale = () => {
 
             <h5>Ripple Effect</h5>
             <InputSwitch v-model="layoutConfig.ripple.value"></InputSwitch>
+
+            <h5>RTL</h5>
+            <InputSwitch v-model="layoutConfig.rtl.value"></InputSwitch>
         </template>
 
         <h5>Bootstrap</h5>
