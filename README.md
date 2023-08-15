@@ -1,3 +1,8 @@
+# Sakai-Plus-Vue
+This template is forked from Sakai-Vue Template with added features:
+* RTL support
+
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Customize configuration
