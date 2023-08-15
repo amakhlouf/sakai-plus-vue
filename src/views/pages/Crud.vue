@@ -131,13 +131,13 @@ const initFilters = () => {
                 <Toolbar class="mb-4">
                     <template v-slot:start>
                         <div class="my-2">
-                            <Button label="New" icon="pi pi-plus" class="p-button-success mr-2" @click="openNew" />
+                            <Button label="New" icon="pi pi-plus" class="p-button-success mx-2" @click="openNew" />
                             <Button label="Delete" icon="pi pi-trash" class="p-button-danger" @click="confirmDeleteSelected" :disabled="!selectedProducts || !selectedProducts.length" />
                         </div>
                     </template>
 
                     <template v-slot:end>
-                        <FileUpload mode="basic" accept="image/*" :maxFileSize="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block" />
+                        <FileUpload mode="basic" accept="image/*" :maxFileSize="1000000" label="Import" chooseLabel="Import" class="mx-2 inline-block" />
                         <Button label="Export" icon="pi pi-upload" class="p-button-help" @click="exportCSV($event)" />
                     </template>
                 </Toolbar>

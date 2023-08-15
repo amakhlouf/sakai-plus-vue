@@ -10,41 +10,83 @@
 @media (min-width: 992px) {
     .layout-wrapper {
         &.layout-overlay {
-            .layout-main-container {
-                margin-left: 0;
-                padding-left: 2rem;
-            }
+            &[dir=ltr] {
+                .layout-main-container {
+                    margin-left: 0;
+                    padding-left: 2rem;
+                }
 
-            .layout-sidebar {
-                transform: translateX(-100%);
-                left: 0;
-                top: 0;
-                height: 100vh;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-
-            &.layout-overlay-active {
                 .layout-sidebar {
-                    transform: translateX(0);
+                    transform: translateX(-100%);
+                    left: 0;
+                    top: 0;
+                    height: 100vh;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+
+                &.layout-overlay-active {
+                    .layout-sidebar {
+                        transform: translateX(0);
+                    }
+                }
+            }
+            &[dir=rtl] {
+                .layout-main-container {
+                    margin-right: 0;
+                    padding-right: 2rem;
+                }
+
+                .layout-sidebar {
+                    transform: translateX(100%);
+                    right: 0;
+                    top: 0;
+                    height: 100vh;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+
+                &.layout-overlay-active {
+                    .layout-sidebar {
+                        transform: translateX(0);
+                    }
                 }
             }
         }
 
         &.layout-static {
-            .layout-main-container {
-                margin-left: 300px;
-            }
-
-            &.layout-static-inactive {
-                .layout-sidebar {
-                    transform: translateX(-100%);
-                    left: 0;
+            &[dir=ltr] {
+                .layout-main-container {
+                    margin-left: 300px;
                 }
 
+                &.layout-static-inactive {
+                    .layout-sidebar {
+                        transform: translateX(-100%);
+                        left: 0;
+                    }
+
+                    .layout-main-container {
+                        margin-left: 0;
+                        padding-left: 2rem;
+                    }
+                }
+            }
+            &[dir=rtl] {
                 .layout-main-container {
-                    margin-left: 0;
-                    padding-left: 2rem;
+                    margin-right: 300px;
+                }
+
+                &.layout-static-inactive {
+                    .layout-sidebar {
+                        transform: translateX(100%);
+                        right: 0;
+                    }
+
+                    .layout-main-container {
+                        margin-right: 0;
+                        padding-right: 2rem;
+                    }
                 }
             }
         }
@@ -61,39 +103,78 @@
     }
 
     .layout-wrapper {
-        .layout-main-container {
-            margin-left: 0;
-            padding-left: 2rem;
-        }
+        &[dir=ltr] {
+            .layout-main-container {
+                margin-left: 0;
+                padding-left: 2rem;
+            }
 
-        .layout-sidebar {
-            transform: translateX(-100%);
-            left: 0;
-            top: 0;
-            height: 100vh;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-
-        .layout-mask {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 998;
-            width: 100%;
-            height: 100%;
-            background-color: var(--maskbg);
-        }
-
-        &.layout-mobile-active {
             .layout-sidebar {
-                transform: translateX(0);
+                transform: translateX(-100%);
+                left: 0;
+                top: 0;
+                height: 100vh;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
             }
 
             .layout-mask {
-                display: block;
-                animation: fadein $transitionDuration;
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 998;
+                width: 100%;
+                height: 100%;
+                background-color: var(--maskbg);
+            }
+
+            &.layout-mobile-active {
+                .layout-sidebar {
+                    transform: translateX(0);
+                }
+
+                .layout-mask {
+                    display: block;
+                    animation: fadein $transitionDuration;
+                }
+            }
+        }
+        &[dir=rtl] {
+            .layout-main-container {
+                margin-right: 0;
+                padding-right: 2rem;
+            }
+
+            .layout-sidebar {
+                transform: translateX(100%);
+                right: 0;
+                top: 0;
+                height: 100vh;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .layout-mask {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 998;
+                width: 100%;
+                height: 100%;
+                background-color: var(--maskbg);
+            }
+
+            &.layout-mobile-active {
+                .layout-sidebar {
+                    transform: translateX(0);
+                }
+
+                .layout-mask {
+                    display: block;
+                    animation: fadein $transitionDuration;
+                }
             }
         }
     }

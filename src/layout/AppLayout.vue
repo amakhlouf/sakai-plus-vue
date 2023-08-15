@@ -6,7 +6,7 @@ import AppSidebar from './AppSidebar.vue';
 import AppConfig from './AppConfig.vue';
 import { useLayout } from '@/layout/composables/layout';
 
-const { layoutConfig, layoutState, isSidebarActive } = useLayout();
+const { layoutConfig, layoutState, isSidebarActive, getDir } = useLayout();
 
 const outsideClickListener = ref(null);
 
@@ -58,7 +58,7 @@ const isOutsideClicked = (event) => {
 </script>
 
 <template>
-    <div class="layout-wrapper" :class="containerClass">
+    <div class="layout-wrapper" :class="containerClass" :dir="getDir">
         <app-topbar></app-topbar>
         <div class="layout-sidebar">
             <app-sidebar></app-sidebar>

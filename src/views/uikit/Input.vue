@@ -167,19 +167,19 @@ const searchCountry = (event) => {
                     <div class="col-12 md:col-4">
                         <div class="field-radiobutton mb-0">
                             <RadioButton id="option1" name="option" value="Chicago" v-model="radioValue" />
-                            <label for="option1">Chicago</label>
+                            <label for="option1" class="mx-2">Chicago</label>
                         </div>
                     </div>
                     <div class="col-12 md:col-4">
                         <div class="field-radiobutton mb-0">
                             <RadioButton id="option2" name="option" value="Los Angeles" v-model="radioValue" />
-                            <label for="option2">Los Angeles</label>
+                            <label for="option2" class="mx-2">Los Angeles</label>
                         </div>
                     </div>
                     <div class="col-12 md:col-4">
                         <div class="field-radiobutton mb-0">
                             <RadioButton id="option3" name="option" value="New York" v-model="radioValue" />
-                            <label for="option3">New York</label>
+                            <label for="option3" class="mx-2">New York</label>
                         </div>
                     </div>
                 </div>
@@ -189,19 +189,19 @@ const searchCountry = (event) => {
                     <div class="col-12 md:col-4">
                         <div class="field-checkbox mb-0">
                             <Checkbox id="checkOption1" name="option" value="Chicago" v-model="checkboxValue" />
-                            <label for="checkOption1">Chicago</label>
+                            <label for="checkOption1" class="mx-2">Chicago</label>
                         </div>
                     </div>
                     <div class="col-12 md:col-4">
                         <div class="field-checkbox mb-0">
                             <Checkbox id="checkOption2" name="option" value="Los Angeles" v-model="checkboxValue" />
-                            <label for="checkOption2">Los Angeles</label>
+                            <label for="checkOption2" class="mx-2">Los Angeles</label>
                         </div>
                     </div>
                     <div class="col-12 md:col-4">
                         <div class="field-checkbox mb-0">
                             <Checkbox id="checkOption3" name="option" value="New York" v-model="checkboxValue" />
-                            <label for="checkOption3">New York</label>
+                            <label for="checkOption3" class="mx-2">New York</label>
                         </div>
                     </div>
                 </div>
